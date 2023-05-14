@@ -79,7 +79,7 @@ struct SearchView: View {
                 print("Geocode error: \(error.localizedDescription)")
             } else if let placemark = placemarks?.first {
                 if let coordinate = placemark.location?.coordinate {
-                    let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(coordinate.latitude),\(coordinate.longitude)&radius=1000&keyword=parking&key=AIzaSyBcCYj2D5p3JoEJ7S92_tL0aaOQJepRBbs"
+                    let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(coordinate.latitude),\(coordinate.longitude)&radius=1000&keyword=parking&key=APIKEY"
                     
                     guard let url = URL(string: urlString) else { return }
                     URLSession.shared.dataTask(with: url) { (data, response, error) in
